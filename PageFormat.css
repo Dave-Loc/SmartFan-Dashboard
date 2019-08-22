@@ -1,0 +1,253 @@
+body{
+    background: -webkit-linear-gradient(#0acffe,#495aff) fixed;
+    
+}
+.content{
+    display: flex;
+   flex-wrap: wrap;
+   
+   margin: 0 200px;
+    /*margin: 50px;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "   reading setting setting  "
+    "   alarm temp fanosc "
+    ;*/
+    
+    
+    
+}
+
+.reading{
+    /*grid-area: reading;*/
+    flex: 1 ;
+    max-width: 100%;
+    
+    background: linear-gradient( 135deg, yellow  , #DC143C) ;
+    color: #fff;
+    padding: 10% 20%;
+    letter-spacing: 2px;
+    font-family: Helvetica;
+    font-size: 16pt;
+    margin: 5px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, .75);
+   
+
+}
+
+
+
+.reading > h1{
+  text-align: center;
+}
+
+.setting{
+   /* grid-area: setting;*/
+    flex: 1 ;
+    max-width: 100%;
+    margin: 7px;
+    text-align: center;
+    background: linear-gradient( 45deg, #7B68EE  , #8B008B) ;
+    color: #fff;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, .75);
+    
+
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background-color: rgba(211,211,211, .5);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#FanSpeedControl{
+    margin-top: 5px;
+	width: 75%;
+  }
+
+.Settings{
+    /*display: grid;*/
+    /*margin: auto;*/
+    /*margin-top: 5px;*/
+    
+}
+
+#low, #med, #high{
+  margin-top: 5px;
+  border-radius: 34px;
+  border: solid #ffffff;
+  background-color: transparent;
+  color: #fff;
+  width: 20%;
+  padding: 5px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#low:hover, #med:hover, #high:hover{
+  cursor: pointer;
+  background-color: #ffff;
+  color: #7B68EE;
+}
+
+#low:focus, #med:focus, #high:focus{
+  background-color: #ffff;
+  color: #7B68EE;
+
+}
+
+.fanosc{
+  /*grid-area: fanosc;*/
+  flex: 0 1 30%;
+  max-width: 100%;
+  margin: 5px;
+  background: linear-gradient(45deg,#00FF33, #66FF99);
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-family: Helvetica;
+  font-size: 16pt;
+  color: #ffff;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, .75);
+ 
+
+}
+
+
+
+.temp{
+  /*grid-area: temp;*/
+  flex: 0 1 30%;
+  max-width: 100%;
+  display: block;
+  color: #fff;
+  background: linear-gradient(	#DC143C, #FA8072)fixed;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, .75);
+  margin: 5px;
+  padding-top: 25%;
+  padding: 10px;
+  font-size: 18pt;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.alarm{
+  /*grid-area: alarm;*/
+  flex: 0 1 30%;
+  max-width: 100%;
+  background:  linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); 
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, .75);
+  color: #fff;
+  margin: 5px;
+  font-family: Helvetica;
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: center;
+  padding:  20px 10px;
+  
+}
+
+input[datetime-local]{
+  background: transparent;
+  font-family: Helvetica;
+}
+
+
+
+.submit{
+  display: block;
+  margin: auto;
+  border: solid #fff;
+  background-color: transparent;
+  color: #fff;
+  
+  border-radius: 20px;
+  
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.submit:hover{
+  cursor: pointer;
+  color: #fd868c;
+  background-color: #fff;
+}
+
+#slider{
+  left: 25%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: block;
+    margin: 5px;
+  }
+ 
+}
+
